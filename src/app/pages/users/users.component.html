@@ -1,0 +1,14 @@
+<div class="container">
+  <main class="grid">
+    <article *ngFor="let user of usersList"
+             (click)="goToProfile(user.id)">
+      <div class="text">
+        <h3 [routerLink]="['/profile', user.id]">{{user.first_name}}</h3>
+        <h4>{{user.last_name}}</h4>
+        <div>
+          <a (click)="goToProfile(user.id)" class="btn card_btn">Click Here</a>
+        </div>
+      </div>
+    </article>
+  </main>
+</div>

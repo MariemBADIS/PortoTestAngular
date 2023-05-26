@@ -1,0 +1,39 @@
+main {
+  padding: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+}
+
+.grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.grid > article img {
+  max-width: 100%;
+}
+
+.grid .text {
+  padding: 20px;
+}
+
+.btn {
+  color: white;
+  background-color: #10FFB4;
+  border: 5px solid transparent;
+  transition: .2s ease;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.btn:hover {
+  color: #10FFB4;
+  background-color: white;
+  transform: scale(1.1);
+  border: 5px solid #10FFB4;
+}
