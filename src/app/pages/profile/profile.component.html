@@ -1,7 +1,17 @@
-<div *ngIf="user$">
-  Bonjour, vous voici sur la page correspondant à votre profil utilisateur :
+<div class="container">
+  <h2>
+    La page correspondante à le profil selectionné :
+  </h2>
 
-  <div>email du profil : {{ (user$ | async)?.data?.email }}</div>
-  <div>nom du profil : "{{ (user$ | async)?.data?.first_name }}"</div>
-  <div>prénom du profil : "{{ (user$ | async)?.data?.last_name }}"</div>
+  <div class="card" *ngIf="user$">
+    <div class="user_details">
+      <h3>{{ (user$ | async)?.data?.first_name }} {{ (user$ | async)?.data?.last_name }} </h3>
+    </div>
+    <div class="card_count">
+      <h5>Email du profil : </h5>
+      <h6>{{ (user$ | async)?.data?.email }}</h6>
+    </div>
+    <div class="btn">Follow</div>
+  </div>
+
 </div>

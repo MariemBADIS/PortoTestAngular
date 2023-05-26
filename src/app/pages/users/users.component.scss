@@ -1,0 +1,40 @@
+main {
+  padding: 60px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+  border-radius: 5px;
+
+  > article {
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .text {
+    padding: 20px;
+  }
+}
+
+.btn {
+  color: white;
+  background-color: #39143a;
+  border: 5px solid transparent;
+  transition: .2s ease;
+  border-radius: 10px;
+  padding: 5px 10px;
+
+  &:hover {
+    color: #39143a;
+    background-color: white;
+    transform: scale(1.1);
+    border: 5px solid #39143a;
+  }
+}
